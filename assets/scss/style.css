@@ -176,4 +176,16 @@ body {
 .topnews .topnews__thumb {
   width: 100%;
 }
+
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  color: var(--gunmetal-color);
+}
+
+.attribution a {
+  color: var(--dark-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
