@@ -12,47 +12,76 @@
 </head>
 
 <body>
+  <header class="heading">
+    <img class="heading__logo" src="./assets/images/logo.svg" alt="logo">
+    <img class="mobile-menu" src="./assets/images/icon-menu.svg" alt="Menu hamburger">
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
-  people.
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-
+    <div class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">Home</li>
+        <li class="menu__item">New</li>
+        <li class="menu__item">Popular</li>
+        <li class="menu__item">Trending</li>
+        <li class="menu__item">Categories</li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <article class="news">
+      <picture>
+        <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 768px;)">
+        <img class="news__image" src="./assets/images/image-web-3-mobile.jpg" alt="News" width="100%" loading="lazy"
+          decoding="async">
+      </picture>
+      <h1 class="news__title">The Bright Future of Web 3.0?</h1>
+      <p class="news__content">
+        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+        of
+        the
+        people.
+        But is it really fulfilling its promise?
+      </p>
+      <button class="news__button">Read more</button>
+    </article>
+    <section class="topnews">
+      <div class="topnews__item">
+        <span class="topnews__number">01</span>
+        <h2 class="topnews__heading">Reviving Retro PCs</h2>
+        <p class="topnews__content">What happens when old PCs are given modern upgrades?</p>
+      </div>
+      <div class="topnews__item">
+        <span class="topnews__number">02</span>
+        <h2 class="topnews__heading">Top 10 Laptops of 2022</h2>
+        <p class="topnews__content">Our best picks for various needs and budgets.</p>
+      </div>
+      <div class="topnews__item">
+        <span class="topnews__number">03</span>
+        <h2 class="topnews__heading">The Growth of Gaming</h2>
+        <p class="topnews__content">How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </section>
+  </main>
+  <aside>
+    <strong>New</strong>
+    <section class="sideblock">
+      <h2 class="sideblock__heading">Hydrogen VS Electric Cars</h2>
+      <p class="sideblock__paragraph">
+        Will hydrogen-fueled cars ever catch up to EVs?
+      </p>
+    </section>
+    <section class="sideblock">
+      <h2 class="sideblock__heading">The Downsides of AI Artistry</h2>
+      <p class="sideblock__paragraph">What are the possible adverse effects of on-demand AI image generation?</p>
+    </section>
+    <section class="sideblock">
+      <h2 class="sideblock__heading">Is VC Funding Drying Up?</h2>
+      <p class="sideblock__paragraph">Private funding by VC firms is down 50% YOY. We take a look at what that means.
+      </p>
+    </section>
+  </aside>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Patryk Porabik</a>.
   </div>
 </body>
 
