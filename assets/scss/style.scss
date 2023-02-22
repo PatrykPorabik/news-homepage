@@ -33,7 +33,6 @@ body {
 }
 #menuToggle
 {
-    display: none;
     flex-direction: column;
     justify-content: center;
     position: relative;
@@ -316,4 +315,43 @@ body {
     color: var(--dark-blue);
     font-weight: 700;
     text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .main {
+        display: grid;
+        grid-template-columns: 66% 34%;
+    }
+
+    .menu {
+
+        & &__list {
+            display: flex;
+        }
+    }
+    .news {
+        & &__image {
+            padding-right: 30px;
+        }
+
+        & &__title {
+            font-size: 56px;
+            line-height: 56px;
+        }
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-right: 30px;
+    }
+
+    .side {
+        margin-top: 0;
+    }
+    .topnews {
+        flex-direction: row;
+        width: 96vw;
+        padding-right: 28px;
+    }
 }
