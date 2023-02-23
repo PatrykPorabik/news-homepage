@@ -32,43 +32,68 @@ body {
     margin: 28px 0;
 }
 
-.menulist {
-    display: flex;
-    list-style-type: none;
-    & &__item {
-        margin-right: 40px;
-    }
-    & &__item:last-of-type {
-        margin-right: 0;
-    }
-    & &__link {
-        color: var(--dark-blue);
-        text-decoration: none;
-    }
-    & &__link:hover {
-        color: var(--primary-red-color);
-    }
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
 }
 
-// .menu {
-//     background-color: var(--offwhite-color);
-//     height: 100vh;
-//     position: absolute;
-//     right: 0;
-//     width: 65%;
-//     display: none;
-    
-//     & &__list {
-//         list-style-type: none;
-//         display: flex;
-//         flex-direction: column;
-//         padding: 144px 24px;
-//     }
+.hamburger__box {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 40px;
+}
 
-//     & &__item {
-//         margin-bottom: 24px;
-//     }
-// }
+@mixin hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-blue);
+    position: absolute;
+}
+
+.hamburger__inner {
+    @include hamburger-line();
+
+    left: 0;
+    top: 50%;
+    transform: translate(-50%);
+    transition: background-color .3s .1s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+    @include hamburger-line();
+
+    content: '';
+    left: 0;
+    transition: transform .3s .1s ease-in-out;
+}
+
+.hamburger__inner::before {
+    top: -10px;
+}
+
+.hamburger__inner::after {
+    top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+    background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.menulist {}
 
 .main {
     display: flex;
@@ -101,6 +126,7 @@ body {
         padding: 13px 31px;
         text-transform: uppercase;
     }
+
     & &__button:hover {
         background-color: var(--dark-blue);
         border: 1px solid var(--dark-blue);
@@ -115,6 +141,7 @@ body {
     & &__link {
         color: var(--dark-blue);
         text-decoration: none;
+        transition: color .2s ease-in-out;
     }
 
     & &__link:hover {
@@ -142,6 +169,7 @@ body {
 .sideblock {
     border-bottom: 1px solid var(--silver-color);
     margin-bottom: 31px;
+
     & &__title {
         color: var(--offwhite-color);
         font-size: 20px;
@@ -153,6 +181,7 @@ body {
     & &__link {
         color: var(--offwhite-color);
         text-decoration: none;
+        transition: color .2s ease-in-out;
     }
 
     & &__link:hover {
@@ -178,8 +207,10 @@ body {
     width: 85%;
     padding-left: 24px;
 }
+
 .topnews {
     margin-top: 64px;
+
     & &__number {
         color: var(--silver-color);
         font-size: 32px;
@@ -210,6 +241,7 @@ body {
     text-align: center;
     font-size: 11px;
     color: var(--gunmetal-color);
+    transition: color .2s ease-in-out;
 }
 
 .attribution a {
@@ -224,12 +256,40 @@ body {
         grid-template-columns: 66% 34%;
     }
 
+    .hamburger {
+        display: none;
+    }
+
     .menu {
 
         & &__list {
             display: flex;
         }
     }
+
+    .menulist {
+        display: flex;
+        list-style-type: none;
+
+        & &__item {
+            margin-right: 40px;
+        }
+
+        & &__item:last-of-type {
+            margin-right: 0;
+        }
+
+        & &__link {
+            color: var(--dark-blue);
+            text-decoration: none;
+            transition: color .2s ease-in-out;
+        }
+
+        & &__link:hover {
+            color: var(--primary-red-color);
+        }
+    }
+
     .news {
         & &__image {
             padding-right: 30px;
@@ -250,6 +310,7 @@ body {
     .side {
         margin-top: 0;
     }
+
     .topnews {
         flex-direction: row;
         width: 96vw;
