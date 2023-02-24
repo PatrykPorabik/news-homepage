@@ -1,11 +1,11 @@
 const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menulist-mobile');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.overlay')
+const menu = document.querySelector('.menu');
 
 const handleClick = () => {
     hamburger.classList.toggle('hamburger--active');
-    menu.classList.toggle('menulist-mobile--active');
     overlay.classList.toggle('overlay--active');
+    menu.classList.toggle('menu--active');
 }
 
 hamburger.addEventListener('click', handleClick);

@@ -12,7 +12,77 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
+  <header class="header">
+    <img class="header__logo" src="./assets/images/logo.svg" alt="Logo">
+    <nav class="navigation">
+      <button class="hamburger" title="Hamburger menu icon">
+        <span class="hamburger__box">
+          <span class="hamburger__inner"></span>
+        </span>
+      </button>
+      <!-- <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">New</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Popular</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Trending</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Categories</a></li>
+      </ul> -->
+    </nav>
+  </header>
 
+  <main>
+    <section class="first">
+      <article>
+        <picture>
+          <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 768px)">
+          <img class="" src="./assets/images/image-web-3-mobile.jpg" alt="News" width="100%">
+        </picture>
+        <header>
+          <h1>The Bright Future of Web 3.0?</h1>
+          <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the
+            hands of the people. But is it really fulfilling its promise?</p>
+        </header>
+        <footer>
+          <button>READ MORE</button>
+        </footer>
+      </article>
+    </section>
+    <section class="sidebar">
+      <p>
+        New
+      </p>
+      <article>
+        <h2>Hydrogen VS Electric Cars</h2>
+        <p>
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
+      </article>
+      <article>
+        <h2>The Downsides of AI Artistry</h2>
+        <p>
+          What are the possible adverse effects of on-demand AI image generation?
+        </p>
+      </article>
+      <article>
+        <h2>Is VC Funding Drying Up?</h2>
+        <p>
+          Private funding by VC firms is down 50% YOY. We take a look at what that means.
+        </p>
+      </article>
+    </section>
+    <section class="third">
+      <article></article>
+      <article></article>
+      <article></article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Patryk Porabik</a></p>
+  </footer>
+  <script src="./assets/scripts/script.js"></script>
 </body>
 
 </html>
