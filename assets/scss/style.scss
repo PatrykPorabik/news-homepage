@@ -43,10 +43,13 @@ body {
     background-color: var(--dark-blue);
     position: absolute;
     opacity: 0.5;
-    top: 0;
-    width: 32vw;
-    left: 0;
+    top: -28px;
+    width: 39.5vw;
+    left: -28px;
     height: 100vh;
+    
+    transform: translateX(-50vw);
+    transition: transform .3s .1s ease-in-out;
 }
 
 .hamburger {
@@ -109,11 +112,6 @@ body {
 
 .hamburger--active .hamburger__inner::after {
     transform: translateY(-10px) rotate(-45deg);
-}
-
-.overlay {
-    transform: translateX(-40vw);
-    transition: transform .3s .1s ease-in-out;
 }
 
 .overlay--active {
@@ -317,7 +315,8 @@ body {
     }
 
     .hamburger,
-    .menulist-mobile {
+    .menulist-mobile,
+    .overlay {
         display: none;
     }
 

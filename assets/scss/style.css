@@ -52,10 +52,16 @@ body {
   background-color: var(--dark-blue);
   position: absolute;
   opacity: 0.5;
-  top: 0;
-  width: 32vw;
-  left: 0;
+  top: -28px;
+  width: 39.5vw;
+  left: -28px;
   height: 100vh;
+  -webkit-transform: translateX(-50vw);
+          transform: translateX(-50vw);
+  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
+  transition: -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
 }
 
 .hamburger {
@@ -122,15 +128,6 @@ body {
 .hamburger--active .hamburger__inner::after {
   -webkit-transform: translateY(-10px) rotate(-45deg);
           transform: translateY(-10px) rotate(-45deg);
-}
-
-.overlay {
-  -webkit-transform: translateX(-40vw);
-          transform: translateX(-40vw);
-  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
-  transition: -webkit-transform .3s .1s ease-in-out;
-  transition: transform .3s .1s ease-in-out;
-  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
 }
 
 .overlay--active {
@@ -362,7 +359,8 @@ body {
         grid-template-columns: 66% 34%;
   }
   .hamburger,
-  .menulist-mobile {
+  .menulist-mobile,
+  .overlay {
     display: none;
   }
   .menulist-desktop {
