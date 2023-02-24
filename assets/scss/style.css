@@ -361,6 +361,9 @@ body {
     -ms-grid-columns: 66% 34%;
         grid-template-columns: 66% 34%;
   }
+  .header {
+    margin-bottom: 52px;
+  }
   .hamburger,
   .menulist-mobile,
   .overlay {
@@ -409,8 +412,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 96vw;
+    margin-top: 28px;
     padding-right: 28px;
+    width: 96vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

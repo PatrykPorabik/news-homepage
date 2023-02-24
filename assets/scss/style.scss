@@ -47,7 +47,7 @@ body {
     width: 39.5vw;
     left: -28px;
     height: 100vh;
-    
+
     transform: translateX(-50vw);
     transition: transform .3s .1s ease-in-out;
 }
@@ -312,9 +312,14 @@ body {
     body {
         margin: 89px 165px;
     }
+
     .main {
         display: grid;
         grid-template-columns: 66% 34%;
+    }
+
+    .header {
+        margin-bottom: 52px;
     }
 
     .hamburger,
@@ -369,7 +374,8 @@ body {
 
     .topnews {
         flex-direction: row;
-        width: 96vw;
+        margin-top: 28px;
         padding-right: 28px;
+        width: 96vw;
     }
 }
