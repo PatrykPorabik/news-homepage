@@ -403,6 +403,7 @@ body {
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
     padding-right: 30px;
+    margin-top: 28px;
   }
   .side {
     margin-top: 0;
@@ -412,7 +413,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-top: 28px;
     padding-right: 28px;
     width: 96vw;
   }

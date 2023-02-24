@@ -366,6 +366,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         padding-right: 30px;
+        margin-top: 28px;
     }
 
     .side {
@@ -374,7 +375,6 @@ body {
 
     .topnews {
         flex-direction: row;
-        margin-top: 28px;
         padding-right: 28px;
         width: 96vw;
     }
