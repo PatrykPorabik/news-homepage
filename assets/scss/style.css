@@ -25,6 +25,15 @@ body {
   margin: 28px;
 }
 
+.sidemenu-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32vw 68vw;
+      grid-template-columns: 32vw 68vw;
+  position: fixed;
+  height: 100vh;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,6 +46,16 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 28px 0;
+}
+
+.overlay {
+  background-color: var(--dark-blue);
+  position: absolute;
+  opacity: 0.5;
+  top: 0;
+  width: 32vw;
+  left: 0;
+  height: 100vh;
 }
 
 .hamburger {
@@ -105,6 +124,20 @@ body {
           transform: translateY(-10px) rotate(-45deg);
 }
 
+.overlay {
+  -webkit-transform: translateX(-40vw);
+          transform: translateX(-40vw);
+  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
+  transition: -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+}
+
+.overlay--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .menulist-mobile {
   background-color: var(--offwhite-color);
   height: 100vh;
@@ -113,7 +146,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 256px;
+  width: 68vw;
   -webkit-transform: translateX(256px);
           transform: translateX(256px);
   -webkit-transition: -webkit-transform .3s .1s ease-in-out;
@@ -328,7 +361,8 @@ body {
     -ms-grid-columns: 66% 34%;
         grid-template-columns: 66% 34%;
   }
-  .hamburger, .menulist-mobile {
+  .hamburger,
+  .menulist-mobile {
     display: none;
   }
   .menulist-desktop {

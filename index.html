@@ -15,18 +15,23 @@
   <header class="header">
     <img class="header__logo" src="./assets/images/logo.svg" alt="logo">
 
-    <button class="hamburger">
+    <button class="hamburger" title="Hamburger menu icon">
       <span class="hamburger__box">
         <span class="hamburger__inner"></span>
       </span>
     </button>
-    <ul class="menulist-mobile">
-      <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Home</a></li>
-      <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">New</a></li>
-      <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Popular</a></li>
-      <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Trending</a></li>
-      <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Categories</a></li>
-    </ul>
+    <div class="sidemenu-container">
+      <div class="overlay">
+
+      </div>
+      <ul class="menulist-mobile">
+        <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Home</a></li>
+        <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">New</a></li>
+        <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Popular</a></li>
+        <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Trending</a></li>
+        <li class="menulist-mobile__item"><a class="menulist-mobile__link" href="#">Categories</a></li>
+      </ul>
+    </div>
     <ul class="menulist-desktop">
       <li class="menulist-desktop__item"><a class="menulist-desktop__link" href="#">Home</a></li>
       <li class="menulist-desktop__item"><a class="menulist-desktop__link" href="#">New</a></li>
@@ -35,7 +40,7 @@
       <li class="menulist-desktop__item"><a class="menulist-desktop__link" href="#">Categories</a></li>
     </ul>
   </header>
-  <main class="main">
+  <main class="main" role="main">
     <article class="news">
       <picture>
         <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 768px)">
@@ -107,11 +112,11 @@
       </section>
     </div>
   </main>
-  <div class="attribution">
+  <div class="attribution" role="contentinfo">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Patryk Porabik</a>.
   </div>
-  <script src="./assets/scripts/script.js"></script>
+  <script defer src="./assets/scripts/script.js"></script>
 </body>
 
 </html>
