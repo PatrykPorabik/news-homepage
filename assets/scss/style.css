@@ -352,6 +352,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    margin: 89px 165px;
+  }
   .main {
     display: -ms-grid;
     display: grid;

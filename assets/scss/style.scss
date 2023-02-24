@@ -309,6 +309,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+    body {
+        margin: 89px 165px;
+    }
     .main {
         display: grid;
         grid-template-columns: 66% 34%;
