@@ -366,7 +366,8 @@ body {
   }
   .hamburger,
   .menulist-mobile,
-  .overlay {
+  .overlay,
+  .sidemenu-container {
     display: none;
   }
   .menulist-desktop {
@@ -414,7 +415,7 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     padding-right: 28px;
-    width: 96vw;
+    width: 79vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
