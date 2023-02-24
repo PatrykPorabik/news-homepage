@@ -39,6 +39,7 @@ body {
     display: inline-block;
     margin: 0;
     padding: 10px;
+    z-index: 2;
 }
 
 .hamburger__box {
@@ -93,7 +94,35 @@ body {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-.menulist {}
+.menulist {
+    background-color: var(--offwhite-color);
+    height: 100vh;
+    list-style-type: none;
+    padding: 144px 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 256px;
+    transform: translateX(256px);
+    transition: transform .3s .1s ease-in-out;
+
+    & &__item {
+        margin-bottom: 24px;
+    }
+
+    & &__item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    & &__link {
+        color: var(--dark-blue);
+        text-decoration: none;
+    }
+}
+
+.menulist--active {
+    transform: translateX(0px);
+}
 
 .main {
     display: flex;
